@@ -9,7 +9,7 @@
               <img src="{%static 'img/user.png' %}" />  
             </div>
             <div class="input-area">
-                <input type="text" name="name" placeholder="Name" required>
+                <input class="name_input" type="text" name="name" placeholder="Name" required>
                 <textarea name="body" placeholder="Say something!" required></textarea>
                 <div class="flex">
                     <input class="upload-file" type="file" value="Choose File" name="image">
@@ -25,15 +25,16 @@
             <li>
                 <img class="menu_icon" src="{%static 'img/menu.png' %}" />
                 <div class="menu">
-                     <a href="/delete/{{ post.id }}/">Delete</a> 
+                     <a href="/delete/{{ post.id }}/">Delete</a>
+                     <br> 
                      <a href="edit/{{ post.id }}/">Edit</a>
                 </div>
                 <div class="logo">
                     <img src="{%static 'img/user.png' %}" />
                 </div>
                 <div class="name_body">
-                    <div class="name">{{ post.name }}</div>
-                    <div class="datetime"> {{post.created_at}} </div>
+                    <div class="name">{{ post.name }}<br></div>
+                    <div class="datetime"> {{post.created_at}} <br></div>
                     <p> {{post.body}} <br></p>
                 </div>
             </br>
@@ -51,7 +52,7 @@
             {% endfor %}
         </ul> 
     </section>
-
+<footer></footer>
 </section>
 
 {% endblock %}
